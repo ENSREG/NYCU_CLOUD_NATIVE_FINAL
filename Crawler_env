@@ -1,0 +1,28 @@
+#!/bin/bash
+
+USER=`whoami`
+UID=`id -u`
+ImageName=crawler_env
+ContainerName=$ImageName"_"$USER
+dockerfile_pth=`dirname $0`
+
+
+echo -------- $ContainerName --------
+# echo $dockerfile_pth
+echo UserName = $USER
+echo UID = $UID
+
+if [ $# -eq 0 ]
+then
+    sudo docker start $ContainerName
+else
+    sudo docker build --build-arg UID=$UID\
+                      --build-arg UserName=$USER\
+                      -t $ImageName:$USER $dockerfile_pth
+    
+    sudo docker run -p 80:80\
+                    --shm-size=50g\
+                    --name $ContainerName\
+                    $ImageName:$USER
+fi
+

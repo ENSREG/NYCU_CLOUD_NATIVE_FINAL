@@ -1,0 +1,12 @@
+requests-html
+requests
+beautifulsoup4
+nltk
+openpyxl
+Flask
+
+pandas
+scikit-learn
+numpy
+matplotlib
+seaborn
