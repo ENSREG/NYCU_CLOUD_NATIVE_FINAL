@@ -13,3 +13,10 @@ chmod +x Crawler_env
 # after setup, user can just use like the following
 ./Crawler_env
 ```
+
+## Push to dockerhub
+
+```
+docker build . -t ianchen0119/nycu_final_flask
+docker push ianchen0119/nycu_final_flask
+```

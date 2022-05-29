@@ -20,7 +20,7 @@ else
                       --build-arg UserName=$USER\
                       -t $ImageName:$USER $dockerfile_pth
     
-    sudo docker run -p 80:80\
+    sudo docker run -p 8080:8080\
                     --shm-size=50g\
                     --name $ContainerName\
                     $ImageName:$USER
