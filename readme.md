@@ -1,5 +1,7 @@
 # NYCU Cloud Native Final Project
 
+![image](https://user-images.githubusercontent.com/42661015/170951173-2a5430a9-2ec2-4b22-a0a2-0d40483f027b.png)
+
 ## 目錄
 
 ```
