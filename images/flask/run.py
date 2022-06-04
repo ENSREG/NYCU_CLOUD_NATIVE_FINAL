@@ -4,7 +4,7 @@ from flask import Flask, request, Response
 
 app = Flask(__name__)
 
-csvFilePath = '../../total.csv'  # csv file Path
+csvFilePath = './total.csv'  # csv file Path
 
 
 @app.route('/GetAll', methods=['GET'])
@@ -78,4 +78,4 @@ def csv_to_json():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host = '0.0.0.0', port = 8080)
