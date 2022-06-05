@@ -2,10 +2,11 @@
 
 ## crawler (By 威淳)
 ```python=
-from header.crawler import ...
+from header.crawler import GoogleCrawler
 
 """
-You can see the using example in ...
+You can see the using example in main_crawler.py
+	python3 main_crawler.py
 """
 
 ```
