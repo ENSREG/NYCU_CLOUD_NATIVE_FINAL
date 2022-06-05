@@ -175,4 +175,4 @@ def get_today():
     today_dict = crawler.write_result(today, result)
     today_dict['date'] = today.strftime('%Y-%m-%d')
     
-    return crawler.write_result(today, result)
+    return today_dict
