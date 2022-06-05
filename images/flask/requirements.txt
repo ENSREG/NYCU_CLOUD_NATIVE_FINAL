@@ -10,3 +10,4 @@ scikit-learn
 numpy
 matplotlib
 seaborn
+Flask-Cors==3.0.10
