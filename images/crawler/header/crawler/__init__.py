@@ -1,1 +1,1 @@
-from .crawler import GoogleCrawler
+from .crawler import GoogleCrawler, get_today

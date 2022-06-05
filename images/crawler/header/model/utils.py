@@ -31,7 +31,8 @@ def predict(
     start: str = '2022-05-29',
     end: str = '2022-12-31',
     date_format: str = '%Y-%m-%d',
-    date_col:str = 'date'
+    date_col:str = 'date',
+    verbose: bool = True
 ):
     datelist = pd.date_range(start = start, end = end)
     start = datetime.strptime(start, date_format)
@@ -43,7 +44,8 @@ def predict(
 
     pred = np.zeros((1, col))
     for i, date in enumerate(datelist):
-        print(date.strftime(date_format))
+        if verbose:
+            print(date.strftime(date_format))
         x = preprocessing(data[col_lst], col_lst).to_numpy()
         
         pred = np.asarray(np.round(model.predict(x)), dtype = 'int')

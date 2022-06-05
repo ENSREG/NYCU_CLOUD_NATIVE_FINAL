@@ -163,3 +163,16 @@ class GoogleCrawler():
             return True 
         return False
 
+    
+def get_today():
+    today = datetime.datetime.today()
+    crawler = GoogleCrawler()
+    result, err = crawler.main_search()
+    if err == 1:
+        print("Too many request!")
+        return
+    
+    today_dict = crawler.write_result(today, result)
+    today_dict['date'] = today.strftime('%Y-%m-%d')
+    
+    return crawler.write_result(today, result)

@@ -29,7 +29,11 @@ def get_today():
     result, err = crawler.main_search()
     if err == 1:
         print("Too many request!")
-        return 
+        return
+    
+    today_dict = crawler.write_result(today, result)
+    today_dict['date'] = str(today)
+    
     return crawler.write_result(today, result)
 
 
