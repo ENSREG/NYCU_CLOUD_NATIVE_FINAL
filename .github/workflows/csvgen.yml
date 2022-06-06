@@ -13,11 +13,12 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
-        python-version: '3.7'
+        python-version: '3.8'
     - name: Install dependencies
       run: |
         cd images/crawler/
         python -m pip install --upgrade pip
+        pip install --upgrade pip setuptools wheel
         pip install -r requirements.txt
         python run.py
         dir
