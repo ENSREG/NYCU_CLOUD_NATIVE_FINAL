@@ -7,7 +7,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-PredFilePath = './Pred.csv'  # csv file Path ./Pred.csv
+PredFilePath = './Pred.csv'  # csv file Path
 GroundTruthFilePath = './GroundTruth.csv'
 
 
