@@ -17,7 +17,7 @@ ARG UserName
 RUN  apt-get update \
   && apt-get install -y wget \
   && rm -rf /var/lib/apt/lists/*
-RUN wget https://raw.githubusercontent.com/allen0091/NYCU_CLOUD_NATIVE_FINAL/Flask_CRUD/total.csv
+RUN wget https://raw.githubusercontent.com/ianchen0119/NYCU_CLOUD_NATIVE_FINAL/master/images/crawler/data/Pred.csv
 RUN pip install -r ./requirements.txt
 CMD ["python","run.py"]
 

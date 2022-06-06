@@ -6,7 +6,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-csvFilePath = './total.csv'  # csv file Path
+csvFilePath = './Pred.csv'  # csv file Path
 
 
 @app.route('/GetAll', methods=['GET'])
