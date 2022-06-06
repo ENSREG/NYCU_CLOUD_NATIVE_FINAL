@@ -21,7 +21,7 @@ jobs:
         pip install --upgrade pip setuptools wheel
         pip install -r requirements.txt
         python run.py
-        dir
+        ls
 
     - name: Commit files
       id: commit
