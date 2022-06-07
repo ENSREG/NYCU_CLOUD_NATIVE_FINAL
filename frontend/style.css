@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+
+body {
+    background-color: #dcdcdcc2;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+#chartdiv {
+    width: 95%;
+    height: 550px;
+    margin: 0 auto;
+    background-color: white;
+    font-size: small;
+}
+
+#text {
+    padding-top: 30px;
+}
+
+h2 {
+    color: white;
+    text-align: left;
+}
+
+li {
+    text-align: left;
+    font-size: medium;
+}
