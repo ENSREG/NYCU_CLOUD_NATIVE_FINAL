@@ -10,7 +10,7 @@ CORS(app)
 PredFilePath = './Pred.csv'  # csv file Path
 GroundTruthFilePath = './GroundTruth.csv'
 
-@app.route('/')
+@app.route('/Probe')
 def probe():
     return 'hello!'
 
