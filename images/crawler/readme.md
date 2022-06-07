@@ -17,7 +17,7 @@ python3 run.py
 
 # header explaination
 
-## crawler (By 威淳)
+## crawler 
 ```python=
 from header.crawler import GoogleCrawler
 
@@ -28,7 +28,7 @@ You can see the using example in main_crawler.py
 
 ```
 
-## model (By 睿成)
+## model 
 ```python=
 from header.model import feature_generation, predict, get_csv_from_json
 from header.model.evaluate import regression_report
