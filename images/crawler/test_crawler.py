@@ -5,7 +5,7 @@ from header.crawler import GoogleCrawler
 
 def test_main_search_with_date():
     crawler = GoogleCrawler()
-    date = datetime.datetime(2022, 1, 1, 0, 0)
+    date = datetime.datetime(2021, 1, 1, 0, 0)
     results, err = crawler.main_search(date)
     assert len(results) > 0 and err == 0
 
@@ -29,7 +29,7 @@ def test_parse_nextPage():
 
 def test_parse_googleResults():
     crawler = GoogleCrawler()
-    target_url = 'https://www.google.com/search?q=tsmc'
+    target_url = 'https://www.google.com/search?q=TSMC+ASML'
     response = crawler.get_source(target_url)
     result = crawler.parse_googleResults(response)
     assert len(result) > 0
