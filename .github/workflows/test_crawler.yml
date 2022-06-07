@@ -24,4 +24,4 @@ jobs:
         pip install -r requirements.txt
         pip install pytest
     - name: testing
-      run: pytest test_crawler.py
+      run: pytest images/crawler/test_crawler.py
