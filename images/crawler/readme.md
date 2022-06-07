@@ -15,20 +15,6 @@ python3 run.py
 # then we will store GroundTruth.csv, Pred.csv in ./data
 ```
 
-## Test
-1. test crawler
-```bash=
-python3 test_crawler.py
-```
-
-2. test model
-```bash=
-python3 test_model.py
-```
-
-> **Warning**
-> 陳毅看一下上面的東西
-
 # header explaination
 
 ## crawler (By 威淳)
