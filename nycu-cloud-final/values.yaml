@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ianchen0119/nycu_final_flask:master
+  repository: ianchen0119/nycu_final_flask
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
