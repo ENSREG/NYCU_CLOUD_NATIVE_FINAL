@@ -195,8 +195,8 @@ am5.ready(function() {
 
     // send request to backend, receive response and pass to draw_chart function
     function data_load(draw_chart) {
-      let crawler_url = "http://127.0.0.1:8080/GetAll/G";
-      let predict_url = "http://127.0.0.1:8080/GetAll/P";
+      let crawler_url = "http://35.229.183.152:8080/GetAll/G";
+      let predict_url = "http://35.229.183.152:8080/GetAll/P";
       var crawler_data;
       let craw_xhr = new XMLHttpRequest();
       craw_xhr.open('get', crawler_url, true);
