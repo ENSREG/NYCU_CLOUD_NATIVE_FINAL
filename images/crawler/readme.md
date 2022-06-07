@@ -15,23 +15,9 @@ python3 run.py
 # then we will store GroundTruth.csv, Pred.csv in ./data
 ```
 
-## Test
-1. test crawler
-```bash=
-python3 test_crawler.py
-```
-
-2. test model
-```bash=
-python3 test_model.py
-```
-
-> **Warning**
-> 陳毅看一下上面的東西
-
 # header explaination
 
-## crawler (By 威淳)
+## crawler 
 ```python=
 from header.crawler import GoogleCrawler
 
@@ -42,7 +28,7 @@ You can see the using example in main_crawler.py
 
 ```
 
-## model (By 睿成)
+## model 
 ```python=
 from header.model import feature_generation, predict, get_csv_from_json
 from header.model.evaluate import regression_report

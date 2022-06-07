@@ -1,0 +1,27 @@
+name: test_crawler
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.8'
+    - name: Install dependencies
+      run: |
+        cd images/crawler/
+        python -m pip install --upgrade pip
+        pip install --upgrade pip setuptools wheel
+        pip install -r requirements.txt
+        pip install pytest
+    - name: testing
+      run: pytest images/crawler/test_crawler.py
