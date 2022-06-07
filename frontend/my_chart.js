@@ -75,6 +75,8 @@ am5.ready(function() {
       // var data = convertData(response);
       // console.log(response);
       // var all_data = convertData(response);
+      console.log(crawler_data)
+      console.log(predict_data)
       for (var i = 0; i < 8; i++) {
         if (i < 4) {
           data = crawler_data[brands[i]];
@@ -199,6 +201,7 @@ am5.ready(function() {
       let predict_url = "https://cors-anywhere.herokuapp.com/http://35.229.183.152:8080/GetAll/P";
       var crawler_data;
       let craw_xhr = new XMLHttpRequest();
+      
       craw_xhr.open('get', crawler_url, true);
       craw_xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
       craw_xhr.send();
@@ -206,23 +209,22 @@ am5.ready(function() {
         if (craw_xhr.status == 200) {
           // console.log(craw_xhr.responseText);
           crawler_data = convertData(craw_xhr.responseText, brands);
+          let pre_xhr = new XMLHttpRequest();
+          pre_xhr.open('get', predict_url, true);
+          pre_xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+          pre_xhr.send();
+          pre_xhr.onload = function () {
+            if (pre_xhr.status == 200) {
+              var predict_data = convertData(pre_xhr.responseText, brands);
+              draw_chart(crawler_data, predict_data);
+            }
+            else {
+              console.log("Fail to receive predict data from backend API.");
+            }
+          };
         }
         else {
           console.log("Fail to receive crawler data from backend API.");
-        }
-      };
-
-      let pre_xhr = new XMLHttpRequest();
-      pre_xhr.open('get', predict_url, true);
-      pre_xhr.send();
-      pre_xhr.onload = function () {
-        if (pre_xhr.status == 200) {
-          // console.log(pre_xhr.responseText);
-          var predict_data = convertData(pre_xhr.responseText, brands);
-          draw_chart(crawler_data, predict_data);
-        }
-        else {
-          console.log("Fail to receive predict data from backend API.");
         }
       };
     };
