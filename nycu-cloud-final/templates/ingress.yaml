@@ -20,8 +20,6 @@ metadata:
     {{- include "nycu-cloud-final.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
-    networking.gke.io/managed-certificates: {{ .Release.Name }}
-    networking.gke.io/v1beta1.FrontendConfig: {{ .Release.Name }}
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
