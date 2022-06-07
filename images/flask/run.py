@@ -10,6 +10,9 @@ CORS(app)
 PredFilePath = './Pred.csv'  # csv file Path
 GroundTruthFilePath = './GroundTruth.csv'
 
+@app.route('/')
+def probe():
+    return 'hello!'
 
 @app.route('/GetAll/<string:FileName>', methods=['GET'])
 def queryAllRecords(FileName):
