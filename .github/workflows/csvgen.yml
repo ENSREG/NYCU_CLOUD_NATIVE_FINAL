@@ -1,7 +1,7 @@
 name: csv-gen
 on:
-  schedule:
-    - cron:  '0 12 * * *'
+#   schedule:
+#     - cron:  '0 12 * * *'
 
 jobs:
   run:
